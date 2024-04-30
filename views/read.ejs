@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Read</title>
+</head>
+<body class="w-full h-full">
+    <div class="w-[70%] bg-blue-100  relative top-10 left-[50%] translate-x-[-50%] rounded-xl">
+    <div class="flex justify-between px-3 py-2">
+        <div>Student Name</div>
+        <div>Department</div>
+        <div>Email</div>
+        <div>Student id</div>
+    </div>
+    <% users.forEach(function(user){ %>
+        <div class="flex justify-between px-3 py-1">
+            <div class="text-lg border "><%= user.studentName %></div>
+            <div class="text-lg border"><%= user.department %></div>
+            <div class="text-lg border"><%= user.email %></div>
+            <div class="text-lg border"><%= user.studentId %></div>
+        </div>
+        
+    <% }) %>
+    </div>
+    <div class="w-[50%] mt-5 bg-zinc-200 rounded-xl flex justify-center items-center top-10 flex-col relative left-[50%] translate-x-[-50%] py-2">
+    Any other operations:
+    <form action="/create" method="get" class="mt-2">
+        <input type="submit" value="Create" class="cursor-pointer text-white bg-blue-400 px-3 py-1 rounded-xl hover:bg-blue-500">
+      </form>
+      <br>
+      <form action="/read" method="get">
+        <input type="submit" value="Read" class="cursor-pointer text-white bg-blue-400 px-3 py-1 rounded-xl hover:bg-blue-500">
+      </form>
+      <br>
+      <form action="/update" method="get">
+        <input type="submit" value="Update" class="cursor-pointer text-white bg-blue-400 px-3 py-1 rounded-xl hover:bg-blue-500">
+      </form>
+      <br>
+      <form action="/delete" method="get">
+        <input type="submit" value="Delete" class="cursor-pointer text-white bg-blue-400 px-3 py-1 rounded-xl hover:bg-blue-500">
+      </form>
+    </div>
+</body>
+</html>

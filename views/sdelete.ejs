@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>CRUD Operations</title>
+</head>
+<body class="w-full h-full">
+  <div class="w-[50%] py-5 bg-zinc-200 absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center rounded-xl">
+    <img src="https://tkrcet.ac.in/wp-content/themes/tkrcet/assets/images/logo-tkrcet.png" alt="" class="w-[70%]">
+    <div class="text-2xl mb-3 mt-3">User deleted Successfully</div>
+    <div class="text-2xl mb-3 mt-3">Any other operations:</div>
+    <form action="/create" method="get" >
+      <input type="submit" value="Create" class="cursor-pointer text-white bg-blue-400 px-3 py-1 rounded-xl hover:bg-blue-500">
+    </form>
+    <br>
+    <form action="/read" method="get">
+      <input type="submit" value="Read" class="cursor-pointer text-white bg-blue-400 px-3 py-1 rounded-xl hover:bg-blue-500">
+    </form>
+    <br>
+    <form action="/update" method="get">
+      <input type="submit" value="Update" class="cursor-pointer text-white bg-blue-400 px-3 py-1 rounded-xl hover:bg-blue-500">
+    </form>
+    <br>
+    <form action="/delete" method="get">
+      <input type="submit" value="Delete" class="cursor-pointer text-white bg-blue-400 px-3 py-1 rounded-xl hover:bg-blue-500">
+    </form>
+  </div>
+</body>
+</html>

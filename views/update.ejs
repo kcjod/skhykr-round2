@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Update</title>
+</head>
+<body class="w-full h-full">
+    <div class="w-[50%] py-5 bg-zinc-200 absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center rounded-xl">
+        <div class="text-3xl mt-2 mb-3">Update User</div>
+    <form action="/update" method="post" class="flex flex-col gap-3 w-[70%] justify-center items-center">
+        <div>Enter email id to find user:</div>
+        <input type="email" placeholder="Email id" name="email" class="w-[75%] px-2 rounded-md">
+        <div>Update details: </div>
+        <input type="text" placeholder="Student Name" name="studentName" class="w-[75%] px-2 rounded-md">
+        <input type="text" placeholder="Student id" name="studentId" class="w-[75%] px-2 rounded-md">
+        <input type="text" placeholder="Department" name="department" class="w-[75%] px-2 rounded-md">
+        <input type="submit" value="Update" class="cursor-pointer text-white bg-blue-400 px-3 py-1 rounded-xl hover:bg-blue-500">
+    </form>
+    </div>
+</body>
+</html>
