@@ -1,16 +1,25 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/crud");
+// Replace <password> with your actual MongoDB Atlas database user password
+const uri = "mongodb+srv://kcjod:kcjod123@test.uvdnnch.mongodb.net/";
 
-const userModel = mongoose.Schema({
-    studentName: String,
-    studentId: String,
-    department: String,
-    email: {
-      type: String,
-      unique: true
-    }
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => {
+  console.log("Connected to MongoDB Atlas");
+}).catch(err => {
+  console.error("Error connecting to MongoDB Atlas:", err.message);
 });
 
+const userModel = mongoose.Schema({
+  studentName: String,
+  studentId: String,
+  department: String,
+  email: {
+    type: String,
+    unique: true
+  }
+});
 
 module.exports = mongoose.model("User", userModel);
